@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t chubaofs/cfs-base:1.2 -f docker/Dockerfile docker
+
+script:
+    - docker/run_docker.sh -t
+    - docker/run_docker.sh -l
