@@ -73,6 +73,7 @@ nohup  /usr/bin/cfs-server -f -c /root/chubaofs-cfg/master.json      &
 - 配置
 
 ```
+// totalMem是当前metanode能使用内存，集群级别的metanode能使用内存是按照部署的metanode节点来算，比如部署了3个，那么集群节点可使用的内存是3*80G=240G内存
 [root@node1 chubaofs-cfg]# cat metanode.json 
 {
     "role": "metanode",
